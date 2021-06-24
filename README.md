@@ -83,4 +83,3 @@ The easiest way for testing is to invert the Alarm condition.
 3. In the conditions section, invert the alarm condition by selecting "Lower/Equal" option.
 4. After some time, the alarm status should change to "In Alarm" and you should receive a Discord notification.
 5. Switch back the alarm condition after testing.
-

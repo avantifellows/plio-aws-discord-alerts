@@ -9,7 +9,15 @@ Create a Discord notification system to monitor your AWS infrastructure in 4 eas
 3. Select topic `type` to be "Standard"
 4. Set the name of the topic. For example: `plio-staging-ecs-alert`
 5. Set a display name of the topic.
-6. Click on `Create topic` button.
+6. Enable access logs for your SNS topic (optional, recommended for production)
+   1. Go to `Delivery status logging` section
+   2. Select `AWS Lambda` from the list of protocols.
+   3. Set `Success sample rate` as 100%.
+   4. For IAM roles, select `Create new service role` and click on `Create new roles` button.
+   5. You will see IAM role are pre-selected. Inside the policy name, select the option that starts with `oneClick_`. These are the default policies.
+   6. Click on `Allow` button. It should take you back to the SNS screen and you should see the new roles configured.
+   7. When this topic publishes a message, you can access the logs from CloudWatch.
+7. Click on `Create topic` button.
 
 ### 2. Set up AWS Cloudwatch Alarm
 1. Go to your Cloudwatch dashboard and click on `Alarms`.

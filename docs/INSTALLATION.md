@@ -16,7 +16,7 @@ Create a Discord notification system to monitor your AWS infrastructure in 4 eas
    4. For IAM roles, select `Create new service role` and click on `Create new roles` button.
    5. You will see IAM role are pre-selected. Inside the policy name, select the option that starts with `oneClick_`. These are the default policies.
    6. Click on `Allow` button. It should take you back to the SNS screen and you should see the new roles configured.
-   7. When this topic publishes a message, you can access the logs from CloudWatch.
+   7. When this topic publishes a message, you can access the logs from CloudWatch. The log group will start with `sns/`.
 7. Click on `Create topic` button.
 
 ### 2. Set up AWS Cloudwatch Alarm

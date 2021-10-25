@@ -56,8 +56,10 @@ def lambda_handler(event, context):
         }
 
         if users_to_notify:
-            users_to_notify = users_to_notify.split(',')
-            users_to_notify = [f"<@{user_id}>" for user_id in users_to_notify if user_id]
+            users_to_notify = users_to_notify.split(",")
+            users_to_notify = [
+                f"<@{user_id}>" for user_id in users_to_notify if user_id
+            ]
             discord_data["content"] = "".join(users_to_notify)
 
         headers = {"content-type": "application/json"}
